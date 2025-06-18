@@ -10,8 +10,8 @@ fun NavController.navigateToPermission() {
     navigate(Route.Permission)
 }
 
-fun NavGraphBuilder.permissionNavGraph() {
+fun NavGraphBuilder.permissionNavGraph(navigateToPager: () -> Unit) {
     composable<Route.Permission> {
-        PermissionScreen()
+        PermissionScreen(navigateToPager)
     }
 }

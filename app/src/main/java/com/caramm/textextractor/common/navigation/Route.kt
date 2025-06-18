@@ -4,14 +4,11 @@ import kotlinx.serialization.Serializable
 
 sealed interface Route {
     @Serializable
-    data object Permission
+    data object Permission: Route
 
     @Serializable
-    data object CreateDocument
+    data object Pager: Route
 
     @Serializable
-    data object Files
-
-    @Serializable
-    data class ModifyFile(val ocrRes: String)
+    data class ModifyFile(val ocrRes: String): Route
 }

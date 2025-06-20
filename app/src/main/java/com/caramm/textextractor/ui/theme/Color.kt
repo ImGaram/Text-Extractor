@@ -8,14 +8,14 @@ import androidx.compose.ui.graphics.Color
 val TextLight = Color(0xFF333333)
 val BackgroundLight = Color(0xFFECECEC)
 val YellowLight = Color(0xFFF7F14A)
-val LightBlueLight = Color(0xFF87CEEB)
+val LightBlueLight = Color(0xFF00BFFF)
 val GrayLight = Color(0xFFD0D0D0)
 val IconLight = Color(0xFFE7E7E7)
 
 val TextDark = Color(0xFFE6E6E6)
 val BackgroundDark = Color(0xFF4D4D4D)
 val YellowDark = Color(0xFFF9DB22)
-val LightBlueDark = Color(0xFF91BAD6)
+val LightBlueDark = Color(0xFF1D88DB)
 val GrayDark = Color(0xFFCCCCCC)
 val IconDark = Color(0xFFD7D7D7)
 

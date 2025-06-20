@@ -12,7 +12,7 @@ private val TextExtractorDarkColors = TextExtractorColors(
     yellow = YellowDark,
     lightBlue = LightBlueDark,
     gray = GrayDark,
-    file = FileDark
+    icon = IconDark
 )
 
 private val TextExtractorLightColors = TextExtractorColors(
@@ -21,7 +21,7 @@ private val TextExtractorLightColors = TextExtractorColors(
     yellow = YellowLight,
     lightBlue = LightBlueLight,
     gray = GrayLight,
-    file = FileLight
+    icon = IconLight
 )
 
 @Composable

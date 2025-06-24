@@ -49,4 +49,13 @@ class TextExtractorColors(
         gray = other.gray
         icon = other.icon
     }
+
+    fun copy() = TextExtractorColors(
+        text = text,
+        background = background,
+        yellow = yellow,
+        lightBlue = lightBlue,
+        gray = gray,
+        icon = icon
+    )
 }

@@ -20,7 +20,10 @@ fun TextExtractorNavigation(
         startDestination = startDestination,
         modifier = modifier
     ) {
-        permissionNavGraph { navController.navigateToPager() }
+        permissionNavGraph {
+            navController.popBackStack()
+            navController.navigateToPager()
+        }
 
         pagerNavGraph(navController)
 

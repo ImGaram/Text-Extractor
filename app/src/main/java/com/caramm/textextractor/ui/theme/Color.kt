@@ -8,16 +8,16 @@ import androidx.compose.ui.graphics.Color
 val TextLight = Color(0xFF333333)
 val BackgroundLight = Color(0xFFECECEC)
 val YellowLight = Color(0xFFF7F14A)
-val LightBlueLight = Color(0xFF87CEEB)
+val LightBlueLight = Color(0xFF00BFFF)
 val GrayLight = Color(0xFFD0D0D0)
-val FileLight = Color(0xFFE7E7E7)
+val IconLight = Color(0xFFE7E7E7)
 
 val TextDark = Color(0xFFE6E6E6)
 val BackgroundDark = Color(0xFF4D4D4D)
 val YellowDark = Color(0xFFF9DB22)
-val LightBlueDark = Color(0xFF91BAD6)
+val LightBlueDark = Color(0xFF1D88DB)
 val GrayDark = Color(0xFFCCCCCC)
-val FileDark = Color(0xFFD7D7D7)
+val IconDark = Color(0xFFD7D7D7)
 
 
 class TextExtractorColors(
@@ -26,7 +26,7 @@ class TextExtractorColors(
     yellow: Color,
     lightBlue: Color,
     gray: Color,
-    file: Color
+    icon: Color
 ) {
     var text by mutableStateOf(text)
         private set
@@ -38,7 +38,7 @@ class TextExtractorColors(
         private set
     var gray by mutableStateOf(gray)
         private set
-    var file by mutableStateOf(file)
+    var icon by mutableStateOf(icon)
         private set
 
     fun update(other: TextExtractorColors) {
@@ -47,6 +47,15 @@ class TextExtractorColors(
         yellow = other.yellow
         lightBlue = other.lightBlue
         gray = other.gray
-        file = other.file
+        icon = other.icon
     }
+
+    fun copy() = TextExtractorColors(
+        text = text,
+        background = background,
+        yellow = yellow,
+        lightBlue = lightBlue,
+        gray = gray,
+        icon = icon
+    )
 }

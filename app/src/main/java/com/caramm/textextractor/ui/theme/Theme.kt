@@ -1,10 +1,10 @@
 package com.caramm.textextractor.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
+import com.caramm.textextractor.common.utils.Theme
 
 private val TextExtractorDarkColors = TextExtractorColors(
     text = TextDark,
@@ -12,7 +12,7 @@ private val TextExtractorDarkColors = TextExtractorColors(
     yellow = YellowDark,
     lightBlue = LightBlueDark,
     gray = GrayDark,
-    file = FileDark
+    icon = IconDark
 )
 
 private val TextExtractorLightColors = TextExtractorColors(
@@ -21,7 +21,7 @@ private val TextExtractorLightColors = TextExtractorColors(
     yellow = YellowLight,
     lightBlue = LightBlueLight,
     gray = GrayLight,
-    file = FileLight
+    icon = IconLight
 )
 
 @Composable
@@ -30,7 +30,7 @@ private fun ProvideTextExtractorTheme(
     type: TextExtractorType,
     content: @Composable () -> Unit
 ) {
-    val colorPalette = remember { colors }
+    val colorPalette = remember { colors.copy() }
     colorPalette.update(colors)
 
     CompositionLocalProvider(
@@ -40,17 +40,19 @@ private fun ProvideTextExtractorTheme(
     )
 }
 
-@Composable
-fun TextExtractorTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
-) {
-    val colors = remember {
-        if (darkTheme) TextExtractorDarkColors else TextExtractorLightColors
+private val Theme.colors: TextExtractorColors
+    get() = when(this) {
+        Theme.LIGHT -> TextExtractorLightColors
+        Theme.DARK -> TextExtractorDarkColors
     }
 
+@Composable
+fun TextExtractorTheme(
+    theme: Theme = TextExtractorTheme.theme,
+    content: @Composable () -> Unit
+) {
     ProvideTextExtractorTheme(
-        colors = colors,
+        colors = theme.colors,
         type = TextExtractorTheme.type,
         content = content
     )

@@ -25,7 +25,6 @@ import com.caramm.textextractor.ui.theme.TextExtractorTheme
 fun PermissionInfo(
     modifier: Modifier,
     iconVector: ImageVector,
-    iconTint: Color,
     title: String,
     description: String
 ) {
@@ -36,12 +35,12 @@ fun PermissionInfo(
         Box(
             modifier = Modifier
                 .clip(CircleShape)
-                .background(TextExtractorTheme.colors.gray)
+                .background(TextExtractorTheme.colors.lightBlue)
                 .padding(8.dp)
         ) {
             TextExtractorIcon(
                 imageVector = iconVector,
-                tint = iconTint
+                tint = TextExtractorTheme.colors.icon
             )
         }
 
@@ -68,7 +67,6 @@ private fun PermissionInfoPreview() {
             .fillMaxWidth()
             .padding(horizontal = 32.dp),
         iconVector = ImageVector.vectorResource(R.drawable.ic_folder),
-        iconTint = TextExtractorTheme.colors.text,
         title = "저장소",
         description = "기기 안에 파일 정보를 불러와 파일 생성 및 파일을 읽고, 쓰기 위해 저장소 권한이 필요합니다."
     )

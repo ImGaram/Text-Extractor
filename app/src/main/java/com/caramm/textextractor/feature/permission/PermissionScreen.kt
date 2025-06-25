@@ -59,7 +59,11 @@ fun PermissionScreen(navigateToPager: () -> Unit) {
     }
 
     LaunchedEffect(hasPermission.value, permissionState.allPermissionsGranted) {
-        if (hasPermission.value || permissionState.allPermissionsGranted) navigateToPager()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            if (hasPermission.value) navigateToPager()
+        } else {
+            if (permissionState.allPermissionsGranted) navigateToPager()
+        }
     }
 
     Column(
@@ -90,7 +94,6 @@ fun PermissionScreen(navigateToPager: () -> Unit) {
                 .fillMaxWidth()
                 .padding(horizontal = 48.dp),
             iconVector = ImageVector.vectorResource(R.drawable.ic_folder),
-            iconTint = TextExtractorTheme.colors.text,
             title = "저장소",
             description = "기기 안에 파일 정보를 불러와 파일 생성 및 파일을 읽고, 쓰기 위해 저장소 권한이 필요합니다."
         )

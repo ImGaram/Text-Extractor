@@ -1,4 +1,4 @@
-package com.caramm.textextractor.ui.theme
+package com.caramm.textextractor.core.persentation.ui.theme
 
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight

@@ -1,4 +1,4 @@
-package com.caramm.textextractor.ui.theme
+package com.caramm.textextractor.core.persentation.ui.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -48,7 +48,7 @@ private val Theme.colors: TextExtractorColors
 
 @Composable
 fun TextExtractorTheme(
-    theme: Theme = TextExtractorTheme.theme,
+    theme: Theme,
     content: @Composable () -> Unit
 ) {
     ProvideTextExtractorTheme(

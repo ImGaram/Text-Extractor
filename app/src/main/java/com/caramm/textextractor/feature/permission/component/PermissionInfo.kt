@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -19,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.caramm.textextractor.R
 import com.caramm.textextractor.core.designsystem.TextExtractorIcon
 import com.caramm.textextractor.core.designsystem.TextExtractorText
-import com.caramm.textextractor.ui.theme.TextExtractorTheme
+import com.caramm.textextractor.core.persentation.ui.theme.TextExtractorTheme
 
 @Composable
 fun PermissionInfo(

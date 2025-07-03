@@ -1,4 +1,4 @@
-package com.caramm.textextractor
+package com.caramm.textextractor.core.persentation
 
 import android.Manifest
 import android.os.Build
@@ -11,17 +11,21 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
 import com.caramm.textextractor.common.navigation.Route
 import com.caramm.textextractor.common.navigation.TextExtractorNavigation
-import com.caramm.textextractor.ui.theme.TextExtractorTheme
+import com.caramm.textextractor.core.persentation.ui.theme.TextExtractorTheme
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalPermissionsApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +33,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         setContent {
-            TextExtractorTheme {
+            val themeViewModel: ThemeViewModel = hiltViewModel()
+            val theme = themeViewModel.theme.collectAsState()
+
+            TextExtractorTheme(theme = theme.value) {
                 val navController = rememberNavController()
                 val permissionState = rememberMultiplePermissionsState(
                     permissions = if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q) {

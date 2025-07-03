@@ -17,7 +17,7 @@ import com.caramm.textextractor.feature.pager.component.SubTitleTopBar
 import com.caramm.textextractor.feature.pager.component.ThemeSwitchButton
 import com.caramm.textextractor.feature.pager.screen.CreateDocumentScreen
 import com.caramm.textextractor.feature.pager.screen.FilesScreen
-import com.caramm.textextractor.ui.theme.TextExtractorTheme
+import com.caramm.textextractor.core.persentation.ui.theme.TextExtractorTheme
 
 @Composable
 fun PagerScreen(navController: NavHostController) {

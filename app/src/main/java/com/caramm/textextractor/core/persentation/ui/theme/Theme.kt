@@ -48,7 +48,7 @@ private val Theme.colors: TextExtractorColors
 
 @Composable
 fun TextExtractorTheme(
-    theme: Theme = TextExtractorTheme.theme,
+    theme: Theme,
     content: @Composable () -> Unit
 ) {
     ProvideTextExtractorTheme(

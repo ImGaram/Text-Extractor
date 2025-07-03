@@ -1,4 +1,4 @@
-package com.caramm.textextractor.ui.theme
+package com.caramm.textextractor.core.persentation.ui.theme
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

@@ -33,7 +33,7 @@ import com.caramm.textextractor.common.utils.getHeight
 import com.caramm.textextractor.core.designsystem.TextExtractorButton
 import com.caramm.textextractor.core.designsystem.TextExtractorText
 import com.caramm.textextractor.feature.permission.component.PermissionInfo
-import com.caramm.textextractor.ui.theme.TextExtractorTheme
+import com.caramm.textextractor.core.persentation.ui.theme.TextExtractorTheme
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
 

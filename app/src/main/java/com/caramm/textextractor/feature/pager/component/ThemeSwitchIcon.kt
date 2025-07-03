@@ -6,7 +6,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import com.caramm.textextractor.R
 import com.caramm.textextractor.core.designsystem.TextExtractorIconButton
-import com.caramm.textextractor.ui.theme.TextExtractorTheme
+import com.caramm.textextractor.core.persentation.ui.theme.TextExtractorTheme
 
 @Composable
 fun ThemeSwitchButton(modifier: Modifier = Modifier) {

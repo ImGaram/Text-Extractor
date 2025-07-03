@@ -2,7 +2,6 @@ package com.caramm.textextractor.feature.pager.component
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -12,7 +11,7 @@ import androidx.compose.ui.unit.dp
 import com.caramm.textextractor.R
 import com.caramm.textextractor.core.designsystem.TextExtractorIcon
 import com.caramm.textextractor.core.designsystem.TextExtractorText
-import com.caramm.textextractor.ui.theme.TextExtractorTheme
+import com.caramm.textextractor.core.persentation.ui.theme.TextExtractorTheme
 
 @Composable
 fun SubTitleTopBar(
